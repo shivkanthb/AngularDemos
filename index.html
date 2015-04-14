@@ -23,9 +23,13 @@
 -->
       <div ng-controller="ShotsListCtrl">
           <ul class="thumbnails">
-              <li class="thumbnail" ng-repeat="shot in list.shots">
-                  {{ shot.title }}
-                  <img src=" {{shot.image_teaser_url}}" />
+              
+              <li class="shot span3" ng-repeat="shot in list.shots">
+                  <div class="thumbnail">
+                  <strong class="title">{{ shot.title }}</strong>
+                  
+                  <a href="{{shot.short_url}}"><img ng-src=" {{shot.image_teaser_url}}" /></a>
+                    </div>
               </li>
               
           </ul>
